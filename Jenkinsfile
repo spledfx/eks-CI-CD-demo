@@ -11,7 +11,7 @@ pipeline {
                 }
             }
         }
-        stage('Update Deployment') {
+        stage('Update App') {
        
             steps {
                 withKubeCredentials(kubectlCredentials: [[caCertificate: '', clusterName: 'default', contextName: 'default', credentialsId: 'config_k3s', namespace: '', serverUrl: ' https://spl.k3s:6443']]){
